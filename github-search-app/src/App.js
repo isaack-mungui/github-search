@@ -12,15 +12,9 @@ function App() {
         <Navbar />
         <div className='content'>
           <Routes>
-            <Route path='/'>
-              <Home />
-            </Route>
-            <Route path='/users'>
-              <User />
-            </Route>
-            <Route path='/repos'>
-              <Repo />
-            </Route>
+            <Route path='/' exact component={Home} />
+            <Route path='/users' component={User} />
+            <Route path='/repos' component={Repo} />
           </Routes>
         </div>
       </div>
