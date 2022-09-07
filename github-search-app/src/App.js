@@ -3,7 +3,7 @@ import Navbar from './components/Navbar'
 import Repo from './components/Repo'
 import User from './components/User'
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <Navbar />
         <div className='content'>
-          <Switch>
+          <Routes>
             <Route path='/'>
               <Home />
             </Route>
@@ -21,7 +21,7 @@ function App() {
             <Route path='/repos'>
               <Repo />
             </Route>
-          </Switch>
+          </Routes>
         </div>
       </div>
     </Router>
