@@ -1,5 +1,6 @@
 import React from "react"
 import { useEffect, useState } from "react"
+import NavBar from "./NavBar"
 import UsersList from "./UsersList"
 
 function SearchContainer() {
@@ -16,6 +17,7 @@ function SearchContainer() {
 
     return (
         <div>
+            <NavBar />
             <UsersList data={userData} />
         </div>
     )
