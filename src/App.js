@@ -3,12 +3,9 @@ import SearchContainer from './components/SearchContainer';
 
 function App() {
   return (
-    <div>
       <div className="App">
-        <h2>GitHub Search</h2>
+        <SearchContainer />
       </div>
-      <SearchContainer />
-    </div>
   );
 }
 
