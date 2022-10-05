@@ -1,11 +1,15 @@
 import React from "react"
+// import Card from "./Card";
+import { useEffect, useState } from 'react'
 import User from "./User"
 
-function UsersList({ data }) {
-    console.log(data);
+function UsersList({ userInfo }) {
+    console.log(userInfo);
     return (
-
-        <User />
+        <div>
+            {/* <Card /> */}
+            <User users={userInfo} />
+        </div>  
     )
 }
 
