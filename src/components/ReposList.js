@@ -1,13 +1,25 @@
 import React from "react"
-import Form from "./Form"
 import Repo from "./Repo"
+import { useEffect, useState } from "react"
+import SearchBar from "./SearchBar"
 
-function ReposList({ repoInfo }) {
-    console.log(repoInfo);
+function ReposList() {
+    const [repos, setRepos] = useState([])
+
+    useEffect(() => {
+        fetch("https://api.github.com/users/jumaallan/repos")
+        .then((r) => r.json())
+        .then((data) => {
+            console.log(data);
+            setRepos(data)
+        })
+    }, [])
+
     return (
         <div>
-            {repoInfo.map((repo) => (
-                <Repo key={repo.id} topics={repo.topics} />
+            <SearchBar />
+            {repos.map((repo) => (
+                <Repo key={repo.id} name={repo.name} desc={repo.description} topics={repo.topics} languages={repo.language} url={repo.clone_url} />
             ))} 
         </div>
     )
