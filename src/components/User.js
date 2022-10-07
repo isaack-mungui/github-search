@@ -1,19 +1,17 @@
-function User({ users }) {
-    console.log(users);
-    // return (
-    //     // <div class="card">
-    //     //     <div class="card-body">
-    //     //         <h4 class="card-title">Card title</h4>
-    //     //         <p class="card-text">Some example text. Some example text.</p>
-    //     //         <a href="#" class="card-link">Card link</a>
-    //     //         <a href="#" class="card-link">Another link</a>
-    //     //     </div>
-    //     // </div>
-
-    //     // {users.map((user) => (
-    //     //     <
-    //     // ))
-    // ) 
+function User({ url, login, repos }) {
+    return (
+        <div className="card">
+            <div className="card-body">
+                {/* <h4 className="card-title">{url}</h4> */}
+                <img className="avatar" src={url} alt="Avatar" />
+                <p className="card-text">Username: {login}</p>
+                <p>
+                    Repositories: <a href={repos} className="card-link">{repos}</a>
+                </p>
+                <a href="#" className="card-link">Another link</a>
+            </div>
+        </div>
+    )
 
 }
 
